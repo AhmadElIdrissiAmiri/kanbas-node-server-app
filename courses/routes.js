@@ -44,3 +44,4 @@ function CourseRoutes(app) {
   });
 }
 export default CourseRoutes;
+
