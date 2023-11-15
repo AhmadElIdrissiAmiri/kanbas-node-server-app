@@ -1,10 +1,7 @@
 import Database from "../Database/index.js";
 function CourseRoutes(app) {
 
-  app.get("/api/courses", (req, res) => {
-    const courses = Database.courses;
-    res.send(courses);
-  });
+  
     app.get("/api/courses/:id", (req, res) => {
         const { id } = req.params;
         const course = Database.courses
@@ -32,7 +29,6 @@ function CourseRoutes(app) {
           .filter((c) => c._id !== id);
         res.sendStatus(204);
       });
-    
 
     app.post("/api/courses", (req, res) => {
         const course = { ...req.body,
@@ -40,7 +36,10 @@ function CourseRoutes(app) {
         Database.courses.push(course);
         res.send(course);
       });
-    
+      app.get("/api/courses", (req, res) => {
+        const courses = Database.courses;
+        res.send(courses);
+      });
 
 }
 export default CourseRoutes;
