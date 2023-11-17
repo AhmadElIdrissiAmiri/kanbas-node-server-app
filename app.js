@@ -9,8 +9,9 @@ import "dotenv/config";
 
 const app = express();
 app.use(cors());
-CourseRoutes(app);
+
 app.use(express.json());
+CourseRoutes(app);
 Lab5(app);
 Hello(app);
 AssignmentRoutes(app);
