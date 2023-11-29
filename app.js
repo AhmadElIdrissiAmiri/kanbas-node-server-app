@@ -17,12 +17,12 @@ const app = express();
 app.use(cors(
     {
         credentials: true,
-        origin: process.env.FRONTEND_URL
+        origin: process.env.FRONTEND_URL,
     }
 ));
 
 const sessionOptions = {
-    secret: "any string",
+    secret: "g#r8n8zQ8D*5sP!2c@r$t1o0nG",
     resave: false,
     saveUninitialized: false,
   };
